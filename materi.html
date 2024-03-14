@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi - Looping dan Array</title>
+</head>
+
+<body>
+    <script>
+        let angka;
+        for (angka = 1; angka <= 10; angka++) {
+            document.write('<br> Nomor ke-' + angka);
+        }
+
+        document.write('<hr>');
+
+        let angka1;
+        for (angka1 = 10; angka1 >= 0; angka1--) {
+            document.write('<br> Nomor ke-' + angka1);
+        }
+
+        document.write('<hr>');
+
+        let ganjil;
+        for (ganjil = 1; ganjil <= 30; ganjil++) {
+            if (ganjil % 2 == 1) {
+                document.write('<br> Angka Ganjil :' + ganjil);
+            }
+        }
+
+        document.write('<hr>');
+
+        let genap;
+        for (genap = 1; genap <= 30; genap++) {
+            if (genap % 2 == 0) {
+                document.write('<br> Angka Genap :' + genap);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
