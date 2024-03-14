@@ -8,6 +8,75 @@
 </head>
 
 <body>
+    <center>
+        <h1>Data Mahasasiswa Sehat Sejahtera</h1>
+    </center>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+                <th>Keterangan</th>
+                <th>Grade</th>
+                <th>Predikat</th>
+            </tr>
+        </thead>
+        <tbody id="tabel-body">
+        </tbody>
+    </table>
+    <script>
+        let data = [
+            { nama: "Jimmy Wira Arbaa", nilai: 90 },
+            { nama: "Ashabul Hamdo", nilai: 65 },
+            { nama: "Ahmad Kasim", nilai: 76 },
+            { nama: "Laravelina Putri", nilai: 88 },
+            { nama: "Karina", nilai: 86 },
+            { nama: "Freddin Auli", nilai: 56 },
+            { nama: "Betriani Hafli", nilai: 76 },
+            { nama: "Tigreal Ahmad Sumanta", nilai: 54 },
+            { nama: "Bagas Drible", nilai: 96 },
+            { nama: "Reani Putri", nilai: 76 }
+        ];
+
+        let tabelBody = document.getElementById("tabel-body");
+
+        for (var i = 0; i < data.length; i++) {
+            var nomor = i + 1;
+            var nama = data[i].nama;
+            var nilai = data[i].nilai;
+            var keterangan, grade, predikat;
+
+            if (nilai >= 85) {
+                keterangan = "Sangat Baik";
+                grade = "A";
+                predikat = "Memuaskan";
+            } else if (nilai >= 70) {
+                keterangan = "Baik";
+                grade = "B";
+                predikat = "Bagus";
+            } else if (nilai >= 60) {
+                keterangan = "Cukup";
+                grade = "C";
+                predikat = "Lulus";
+            } else {
+                keterangan = "Kurang";
+                grade = "D";
+                predikat = "Tidak Lulus";
+            }
+
+            var newRow = "<tr>";
+            newRow += "<td>" + nomor + "</td>";
+            newRow += "<td>" + nama + "</td>";
+            newRow += "<td>" + nilai + "</td>";
+            newRow += "<td>" + keterangan + "</td>";
+            newRow += "<td>" + grade + "</td>";
+            newRow += "<td>" + predikat + "</td>";
+            newRow += "</tr>";
+
+            tabelBody.innerHTML += newRow;
+        }
+    </script>
 
 </body>
 
